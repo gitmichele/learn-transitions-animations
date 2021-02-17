@@ -49,7 +49,6 @@ body{
     padding: 50px 50px;
     box-shadow: -10px 10px 5px #aaaaaa;
     border-radius: 5px;
-
 }
 
 .input-container{
@@ -65,7 +64,6 @@ body{
 	padding: 20px 0 0;
 	width: 100%;
 }
-
  .input-field {
 	width: 100%;
 	border: 0;
@@ -75,17 +73,14 @@ body{
 	padding: 7px 0;
 	transition: border-color 0.2s;
 }
-
  .input-field::placeholder {
 	color: transparent;
 }
-
 .input-field:placeholder-shown ~ .input-label {
 	font-size: 20px;
 	cursor: text;
 	top: 20px;
 }
-
  .input-label {
 	position: absolute;
 	top: 0;
@@ -94,14 +89,12 @@ body{
 	font-size: 16px;
 	color: #9b9b9b;
 }
-
  .input-field:focus {
 	padding-bottom: 6px;
 	font-weight: 400;
 	border-width: 3px;
     border-color: green;
 }
-
  .input-field:focus ~ .input-label {
 	position: absolute;
 	top: 0;
@@ -111,11 +104,90 @@ body{
 	color: green;
 	font-weight: 700;
 }
-/* reset input */
- /* .input-field:required, .input-field:invalid {
-	box-shadow: none;
-} */
 
+/* submit */
+.sign-container{
+    width: 150px;
+    height: 50px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid black;
+}
+
+.vert-line{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 50px;
+    border: 1px solid black;
+    top: -2px;
+}
+
+.hor-line{
+    display: none;
+    top: 0;
+    position: absolute;
+    width: 1px;
+    width: 150px;
+    border: 1px solid black;
+    left: -2px;
+}
+
+/* animazone */
+.sign-container .vert-line{
+    animation-name: left-right;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: block;
+}
+
+@keyframes left-right {
+    0 {
+        left: 0;
+    }
+
+    50%{
+        left: 100%;
+    }
+
+
+    100% {
+        left: 0;
+    }
+}
+
+.sign-container .hor-line{
+    animation-name: top-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: block
+}
+
+@keyframes top-down {
+    0 {
+        top: 0;
+    }
+
+    50%{
+        top: 100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+a{
+    text-decoration: none;
+    line-height: 50px;
+    color: #000;
+    font-weight: 700;
+}
 
 
 /* colonna img */
@@ -125,4 +197,9 @@ body{
     height: 100vh;
     /* DEBUG:  */
     background-color: lightgreen;
+}
+
+.sign-container:hover .vert-line,
+.sign-container:hover .hor-line{
+    display: none;
 }
