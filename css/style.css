@@ -8,3 +8,121 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+/* clearfix */
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* LOGIN PAGE */
+#login-page{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* colonna login */
+#login-page .login-col{
+    float: left;
+    width: 35%;
+    height: 100vh;
+}
+
+.login-header i{
+    font-size: 30px;
+    padding: 15px 0 0 15px;
+    transition: .2s linear
+}
+
+.login-header i:hover{
+    color: gray;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.login-container{
+    width: 90%;
+    margin: 50px auto;
+    padding: 50px 50px;
+    box-shadow: -10px 10px 5px #aaaaaa;
+    border-radius: 5px;
+
+}
+
+.input-container{
+    width: 65%;
+    margin: 0 auto 40px auto;
+    position: relative;
+}
+
+
+/* input animation */
+.input-group{
+	position: relative;
+	padding: 20px 0 0;
+	width: 100%;
+}
+
+ .input-field {
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 20px;
+	padding: 7px 0;
+	transition: border-color 0.2s;
+}
+
+ .input-field::placeholder {
+	color: transparent;
+}
+
+.input-field:placeholder-shown ~ .input-label {
+	font-size: 20px;
+	cursor: text;
+	top: 20px;
+}
+
+ .input-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 16px;
+	color: #9b9b9b;
+}
+
+ .input-field:focus {
+	padding-bottom: 6px;
+	font-weight: 400;
+	border-width: 3px;
+    border-color: green;
+}
+
+ .input-field:focus ~ .input-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 16px;
+	color: green;
+	font-weight: 700;
+}
+/* reset input */
+ /* .input-field:required, .input-field:invalid {
+	box-shadow: none;
+} */
+
+
+
+/* colonna img */
+#login-page .img-col{
+    float: left;
+    width: 65%;
+    height: 100vh;
+    /* DEBUG:  */
+    background-color: lightgreen;
+}
